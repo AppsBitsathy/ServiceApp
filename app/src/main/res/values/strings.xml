@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ServiceNearby</string>
+    <string name="service_app">Service App</string>
 </resources>
