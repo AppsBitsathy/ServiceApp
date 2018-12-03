@@ -1,16 +1,35 @@
 package in.bittechpro.servicenearby;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.SearchView;
-import android.widget.Toast;
 
 public class SearchActivity extends AppCompatActivity {
 
     SearchView searchView;
     GridView gridView;
+
+    private Integer[] spez_icon = {
+            R.drawable.spez_1,R.drawable.spez_1,R.drawable.spez_1,
+            R.drawable.spez_1,R.drawable.spez_1,R.drawable.spez_1,
+            R.drawable.spez_1,R.drawable.spez_1,R.drawable.spez_1,
+            R.drawable.spez_1,R.drawable.spez_1,R.drawable.spez_1,
+            R.drawable.spez_1,R.drawable.spez_1,R.drawable.spez_1,
+            R.drawable.spez_1,R.drawable.spez_1,R.drawable.spez_1,
+            R.drawable.spez_1,R.drawable.spez_1,R.drawable.spez_1
+    };
+
+    private  String[] spez_name = {
+            "Specilization","Specilization","Specilization",
+            "Specilization","Specilization","Specilization",
+            "Specilization","Specilization","Specilization",
+            "Specilization","Specilization","Specilization",
+            "Specilization","Specilization","Specilization",
+            "Specilization","Specilization","Specilization",
+            "Specilization","Specilization","Specilization",
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +48,7 @@ public class SearchActivity extends AppCompatActivity {
         });
 
         gridView = findViewById(R.id.grid_spez);
-        gridView.setAdapter(new SpezAdapter(this));
+        gridView.setAdapter(new SpezAdapter(this,spez_icon,spez_name));
 
 
 
@@ -37,7 +56,7 @@ public class SearchActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Toast.makeText(this, "sdfhsdh", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Have a Good day", Toast.LENGTH_SHORT).show();
         super.onBackPressed();
     }
 }

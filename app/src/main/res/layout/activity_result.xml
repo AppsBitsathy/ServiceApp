@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".ResultActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/result_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/NoActionBar.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/background_light"
+            android:theme="@style/ToolbarColoredBackArrow"
+            app:popupTheme="@style/NoActionBar.PopupOverlay"
+            app:titleTextColor="@android:color/darker_gray" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ListView
+        android:id="@+id/list_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/result_app_bar"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:divider="@null"
+        android:padding="5dp"
+        android:dividerHeight="10.0sp"/>
+
+</RelativeLayout>
